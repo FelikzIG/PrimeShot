@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,6 +69,8 @@ namespace PrimeShot
         // Captures the screenshot of the selected region
         private void CaptureSelectedRegion()
         {
+            Random random = new Random();
+            int randomInRange = random.Next(1, 100000);  // Generates a number between 1 and 100.000, used for generating a random file name
             if (selectionRectangle.Width > 0 && selectionRectangle.Height > 0)
             {
                 try
@@ -79,14 +82,18 @@ namespace PrimeShot
                         g.CopyFromScreen(selectionRectangle.Location, Point.Empty, selectionRectangle.Size);
                     }
 
-                    // Save or display the captured image
-                    SaveFileDialog saveFileDialog = new SaveFileDialog();
-                    saveFileDialog.Filter = "PNG Image|*.png";
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    var uniqueFileName = Properties.Settings.Default.saveTo + "/" + randomInRange + ".jpg";
+                    try
                     {
-                        screenshotBitmap.Save(saveFileDialog.FileName);
-                        Form1 mainForm = new Form1();
-                        mainForm.Show();
+                        screenshotBitmap.Save(uniqueFileName, ImageFormat.Jpeg);
+                        MessageBox.Show("Screenshot saved to " + uniqueFileName);
+                        //Show form again once screenshot is taken and saved
+                        this.Show();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        this.Show();
                     }
                 }
                 catch (Exception ex)
