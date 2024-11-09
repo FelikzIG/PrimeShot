@@ -9,3 +9,4 @@ C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.csproj.CoreCompileInputs.cache
 C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.exe
 C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.pdb
 C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.settings.resources
+C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.ScreenshotForm.resources
