@@ -1,0 +1,11 @@
+C:\DEV\PrimeShot\PrimeShot\bin\Debug\PrimeShot.exe.config
+C:\DEV\PrimeShot\PrimeShot\bin\Debug\PrimeShot.exe
+C:\DEV\PrimeShot\PrimeShot\bin\Debug\PrimeShot.pdb
+C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.csproj.AssemblyReference.cache
+C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.Form1.resources
+C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.Properties.Resources.resources
+C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.csproj.GenerateResource.cache
+C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.csproj.CoreCompileInputs.cache
+C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.exe
+C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.pdb
+C:\DEV\PrimeShot\PrimeShot\obj\Debug\PrimeShot.settings.resources
