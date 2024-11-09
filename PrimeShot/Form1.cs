@@ -78,5 +78,11 @@ namespace PrimeShot
             customRegionForm.Show();
             this.Hide();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            about aboutPrime = new about();
+            aboutPrime.Show();
+        }
     }
 }
