@@ -7,6 +7,7 @@
 <h2>Project Screenshots:</h2>
 
 <img src="https://i.imgur.com/G8OcOCA.png" alt="project-screenshot" width="400" height="400/">
+<img src="https://i.gyazo.com/0dd0685c7581bb777e879ed80d23407e.png" alt="project-screenshot" width="400" height="400/">
 
   
   
