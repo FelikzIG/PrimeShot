@@ -33,6 +33,7 @@ namespace PrimeShot
         private void button1_Click_1(object sender, EventArgs e)
         {
             //Save application user settings
+            Properties.Settings.Default.fileType = comboBox1.Text;
             Properties.Settings.Default.Save();
         }
 

@@ -40,13 +40,21 @@ namespace PrimeShot
                 }
 
                 //Save the screenshot as a Jpg image
-                var uniqueFileName = Properties.Settings.Default.saveTo + "/" + randomInRange + ".jpg";
+                var uniqueFileName = Properties.Settings.Default.saveTo + "/" + randomInRange + "." + Properties.Settings.Default.fileType;
                 try
                 {
-                    bitmap.Save(uniqueFileName, ImageFormat.Jpeg);
-                    MessageBox.Show("Screenshot saved to " + uniqueFileName);
-                    //Show form again once screenshot is taken and saved
-                    this.Show();
+                    if (Properties.Settings.Default.fileType == "png")
+                    {
+                        bitmap.Save(uniqueFileName, ImageFormat.Png);
+                        MessageBox.Show("Screenshot saved to " + uniqueFileName);
+                        this.Show();
+                    }
+                    else if (Properties.Settings.Default.fileType == "jpg")
+                    {
+                        bitmap.Save(uniqueFileName, ImageFormat.Jpeg);
+                        MessageBox.Show("Screenshot saved to " + uniqueFileName);
+                        this.Show();
+                    }
                 }
                 catch (Exception ex)
                 {

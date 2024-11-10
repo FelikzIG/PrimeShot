@@ -34,5 +34,17 @@ namespace PrimeShot.Properties {
                 this["saveTo"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fileType {
+            get {
+                return ((string)(this["fileType"]));
+            }
+            set {
+                this["fileType"] = value;
+            }
+        }
     }
 }

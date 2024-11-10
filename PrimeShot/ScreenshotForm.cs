@@ -82,13 +82,21 @@ namespace PrimeShot
                         g.CopyFromScreen(selectionRectangle.Location, Point.Empty, selectionRectangle.Size);
                     }
 
-                    var uniqueFileName = Properties.Settings.Default.saveTo + "/" + randomInRange + ".jpg";
+                    var uniqueFileName = Properties.Settings.Default.saveTo + "/" + randomInRange + "." + Properties.Settings.Default.fileType;
                     try
                     {
-                        screenshotBitmap.Save(uniqueFileName, ImageFormat.Jpeg);
-                        MessageBox.Show("Screenshot saved to " + uniqueFileName);
-                        //Show form again once screenshot is taken and saved
-                        this.Show();
+                        if(Properties.Settings.Default.fileType == "png")
+                        {
+                            screenshotBitmap.Save(uniqueFileName, ImageFormat.Png);
+                            MessageBox.Show("Screenshot saved to " + uniqueFileName);
+                            this.Show();
+                        }
+                        else if (Properties.Settings.Default.fileType == "jpg")
+                        {
+                            screenshotBitmap.Save(uniqueFileName, ImageFormat.Jpeg);
+                            MessageBox.Show("Screenshot saved to " + uniqueFileName);
+                            this.Show();
+                        }
                     }
                     catch (Exception ex)
                     {
